@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { Waves, Umbrella, Child, Coffee } from 'lucide-react';
+import { Waves, Umbrella, Baby, Coffee } from 'lucide-react';
 
 const PoolSection = () => {
   const features = [
@@ -15,7 +15,7 @@ const PoolSection = () => {
       description: "Комфортные шезлонги и зоны отдыха вокруг бассейна"
     },
     {
-      icon: Child,
+      icon: Baby,
       title: "Детский бассейн",
       description: "Специальный теплый бассейн для детей с игровой зоной"
     },
