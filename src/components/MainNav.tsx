@@ -17,8 +17,8 @@ const MainNav = () => {
 
   const navItems = [
     { name: 'О комплексе', href: '#about' },
+    { name: 'Удобства', href: '#pool' },
     { name: 'Апартаменты', href: '#apartments' },
-    { name: 'Удобства', href: '#amenities' },
     { name: 'Расположение', href: '#location' },
     { name: 'Контакты', href: '#contact' },
   ];

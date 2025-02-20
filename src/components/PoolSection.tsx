@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Waves, Umbrella, Baby, Coffee } from 'lucide-react';
 
@@ -27,7 +26,7 @@ const PoolSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section id="pool" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
