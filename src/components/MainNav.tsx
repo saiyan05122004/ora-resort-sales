@@ -26,14 +26,23 @@ const MainNav = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md' : 'bg-transparent'
+        isScrolled 
+          ? 'bg-white/90 backdrop-blur-md shadow-md' 
+          : 'bg-black/20 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
-            <a href="#" className="text-2xl font-semibold text-primary">
-              ORA HOTEL&SPA
+            <a 
+              href="#" 
+              className={`text-2xl font-bold tracking-wider ${
+                isScrolled 
+                  ? 'text-primary' 
+                  : 'text-white'
+              } transition-colors duration-200 font-serif hover:text-primary`}
+            >
+              ORA HOTEL<span className="text-primary">&</span>SPA
             </a>
           </div>
           
@@ -43,7 +52,11 @@ const MainNav = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-800 hover:text-primary transition-colors duration-200"
+                className={`font-medium tracking-wide ${
+                  isScrolled 
+                    ? 'text-gray-800 hover:text-primary' 
+                    : 'text-white hover:text-primary'
+                } transition-colors duration-200`}
               >
                 {item.name}
               </a>
@@ -54,7 +67,9 @@ const MainNav = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-800 hover:text-primary"
+              className={`${
+                isScrolled ? 'text-gray-800' : 'text-white'
+              } hover:text-primary transition-colors duration-200`}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -63,13 +78,13 @@ const MainNav = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden bg-white/95 backdrop-blur-md rounded-b-xl shadow-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-800 hover:text-primary transition-colors duration-200"
+                  className="block px-3 py-2 text-gray-800 font-medium hover:text-primary transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
