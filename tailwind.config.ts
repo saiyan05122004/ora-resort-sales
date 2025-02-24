@@ -26,11 +26,15 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#D4B996", // золотистый цвет из логотипа
+          DEFAULT: "#D4B996",
+          light: "#E5D4B7",
+          dark: "#C3A785",
           foreground: "#1a1a1a",
         },
         secondary: {
-          DEFAULT: "#F5EEE6", // светлый оттенок для фона
+          DEFAULT: "#F5EEE6",
+          light: "#FFF9F5",
+          dark: "#E6D9CB",
           foreground: "#1a1a1a",
         },
         destructive: {
