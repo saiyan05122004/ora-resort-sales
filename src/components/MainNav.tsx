@@ -35,7 +35,7 @@ const MainNav = () => {
         <div className="flex items-center justify-between h-20">
           <a href="/" className="flex items-center space-x-2">
             <img
-              src="/lovable-uploads/7724b3b3-63c9-46cf-886c-a8f72f3a0f61.png"
+              src="/lovable-uploads/3231194c-7fbf-45df-9b3e-26acec733b88.png"
               alt="ORA Hotel & SPA"
               className="h-16 w-auto"
             />

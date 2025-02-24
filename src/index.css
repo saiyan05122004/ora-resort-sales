@@ -10,9 +10,9 @@
   --card-foreground: 222.2 84% 4.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
-  --primary: 40 26% 71%;
+  --primary: 35 100% 65%;
   --primary-foreground: 0 0% 10%;
-  --secondary: 39 41% 93%;
+  --secondary: 196 100% 20%;
   --secondary-foreground: 24 10% 10%;
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
@@ -51,17 +51,17 @@
 
 /* Дополнительные стили для основных цветов */
 .text-primary {
-  color: #D4B996;
+  color: #E6B567;
 }
 
 .bg-primary {
-  background-color: #D4B996;
+  background-color: #E6B567;
 }
 
 .hover\:text-primary:hover {
-  color: #D4B996;
+  color: #E6B567;
 }
 
 .bg-secondary {
-  background-color: #F5EEE6;
+  background-color: #0A4B5B;
 }

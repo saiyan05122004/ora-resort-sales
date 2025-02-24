@@ -26,16 +26,16 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#D4B996",
-          light: "#E5D4B7",
-          dark: "#C3A785",
+          DEFAULT: "#E6B567", // золотистый цвет из логотипа
+          light: "#F0C688",
+          dark: "#D9A44E",
           foreground: "#1a1a1a",
         },
         secondary: {
-          DEFAULT: "#F5EEE6",
-          light: "#FFF9F5",
-          dark: "#E6D9CB",
-          foreground: "#1a1a1a",
+          DEFAULT: "#0A4B5B", // морской сине-зеленый цвет из фона
+          light: "#0D5D72",
+          dark: "#083844",
+          foreground: "#ffffff",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
