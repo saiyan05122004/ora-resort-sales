@@ -40,11 +40,7 @@ const MainNav = () => {
                 alt="ORA Hotel & SPA"
                 className="h-20 w-auto transform transition-transform hover:scale-105"
               />
-              <div className="absolute -bottom-2 left-0 right-0 text-center">
-                <span className="text-xs font-semibold text-primary bg-white/80 px-2 py-0.5 rounded-full">
-                  Премиальные апартаменты
-                </span>
-              </div>
+              {/* Removed the premium apartments text that was here */}
             </div>
           </a>
 
