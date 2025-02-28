@@ -30,9 +30,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <span className="inline-block bg-primary/90 text-secondary-foreground px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-lg">
-              Инвестиция в ваше будущее
-            </span>
+            {/* Removed the "Инвестиция в ваше будущее" span that was here */}
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
               ПРЕМИАЛЬНЫЕ АПАРТАМЕНТЫ <br />
               <span className="text-primary">ORA HOTEL&SPA</span>
