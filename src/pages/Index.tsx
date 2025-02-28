@@ -4,6 +4,8 @@ import HeroSection from '@/components/HeroSection';
 import ComplexSection from '@/components/ComplexSection';
 import PoolSection from '@/components/PoolSection';
 import ApartmentsSection from '@/components/ApartmentsSection';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
@@ -13,6 +15,8 @@ const Index = () => {
       <ComplexSection />
       <PoolSection />
       <ApartmentsSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
