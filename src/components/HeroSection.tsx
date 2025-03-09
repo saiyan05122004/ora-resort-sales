@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Building, Home, Wallet, PalmTree, Waves } from 'lucide-react';
+import { Building, Home, Wallet, Palmtree, Waves } from 'lucide-react';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,7 +53,7 @@ const HeroSection = () => {
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
-                <PalmTree className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
+                <Palmtree className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
                 <div>
                   <h3 className="text-white font-bold">Престижное жилье</h3>
                   <p className="text-white/80 text-sm">Для жизни и отдыха</p>
