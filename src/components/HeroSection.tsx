@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Building, Home, Wallet, PalmTree, Waves } from 'lucide-react';
+import { Building, Home, Wallet } from 'lucide-react';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,15 +16,10 @@ const HeroSection = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/82baaea0-8ef3-4249-af81-dceb47dc859e.png')",
+            backgroundImage: "url('/lovable-uploads/7724b3b3-63c9-46cf-886c-a8f72f3a0f61.png')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/70 to-transparent" />
-        
-        {/* ORA Logo in top left */}
-        <div className="absolute top-10 left-10 z-10">
-          <span className="text-primary text-3xl font-bold tracking-wider">ORA</span>
-        </div>
+        <div className="absolute inset-0 bg-black/50" />
       </div>
       
       <div className="relative h-full flex items-center">
@@ -33,8 +28,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}
-            className="max-w-2xl"
+            className="max-w-3xl"
           >
+            {/* Removed the "Инвестиция в ваше будущее" span that was here */}
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
               ПРЕМИАЛЬНЫЕ АПАРТАМЕНТЫ <br />
               <span className="text-primary">ORA HOTEL&SPA</span>
@@ -53,7 +49,7 @@ const HeroSection = () => {
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
-                <PalmTree className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
+                <Home className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
                 <div>
                   <h3 className="text-white font-bold">Престижное жилье</h3>
                   <p className="text-white/80 text-sm">Для жизни и отдыха</p>
@@ -61,7 +57,7 @@ const HeroSection = () => {
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
-                <Waves className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
+                <Wallet className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
                 <div>
                   <h3 className="text-white font-bold">Выгодное вложение</h3>
                   <p className="text-white/80 text-sm">Рост стоимости недвижимости</p>
