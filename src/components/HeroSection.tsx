@@ -16,10 +16,10 @@ const HeroSection = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/94168edc-6cc4-493d-a0a2-d6d7a7e541af.png')",
+            backgroundImage: "url('/lovable-uploads/5f000283-dccf-4a3f-b144-02890d1ee1d0.png')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/60 to-transparent" />
       </div>
       
       <div className="relative h-full flex items-center">
