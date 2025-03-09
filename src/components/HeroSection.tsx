@@ -16,10 +16,10 @@ const HeroSection = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/7724b3b3-63c9-46cf-886c-a8f72f3a0f61.png')",
+            backgroundImage: "url('/lovable-uploads/94168edc-6cc4-493d-a0a2-d6d7a7e541af.png')",
           }}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/50 to-transparent" />
       </div>
       
       <div className="relative h-full flex items-center">
@@ -28,9 +28,8 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            className="max-w-2xl"
           >
-            {/* Removed the "Инвестиция в ваше будущее" span that was here */}
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
               ПРЕМИАЛЬНЫЕ АПАРТАМЕНТЫ <br />
               <span className="text-primary">ORA HOTEL&SPA</span>
