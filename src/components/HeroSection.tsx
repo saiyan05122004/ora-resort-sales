@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Building, Home, Wallet } from 'lucide-react';
+import { Building, Home, Wallet, PalmTree, Waves } from 'lucide-react';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,7 +19,12 @@ const HeroSection = () => {
             backgroundImage: "url('/lovable-uploads/82baaea0-8ef3-4249-af81-dceb47dc859e.png')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/70 to-transparent" />
+        
+        {/* ORA Logo in top left */}
+        <div className="absolute top-10 left-10 z-10">
+          <span className="text-primary text-3xl font-bold tracking-wider">ORA</span>
+        </div>
       </div>
       
       <div className="relative h-full flex items-center">
@@ -48,7 +53,7 @@ const HeroSection = () => {
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
-                <Home className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
+                <PalmTree className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
                 <div>
                   <h3 className="text-white font-bold">Престижное жилье</h3>
                   <p className="text-white/80 text-sm">Для жизни и отдыха</p>
@@ -56,7 +61,7 @@ const HeroSection = () => {
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center">
-                <Wallet className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
+                <Waves className="w-8 h-8 text-primary mr-3 flex-shrink-0" />
                 <div>
                   <h3 className="text-white font-bold">Выгодное вложение</h3>
                   <p className="text-white/80 text-sm">Рост стоимости недвижимости</p>
