@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Building, Home, Wallet } from 'lucide-react';
@@ -30,9 +29,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            {/* Removed the "Инвестиция в ваше будущее" span that was here */}
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-              ПРЕМИАЛЬНЫЕ АПАРТАМЕНТЫ <br />
+              АПАРТАМЕНТЫ <br />
               <span className="text-primary">ORA HOTEL&SPA</span>
             </h1>
             <p className="text-xl text-white/90 mb-8 drop-shadow-md">
