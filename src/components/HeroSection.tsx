@@ -19,7 +19,7 @@ const HeroSection = () => {
             backgroundImage: "url('/lovable-uploads/d11169cf-cc73-461f-8412-480d6c3466ca.png')",
           }}
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
       
       <div className="relative h-full flex items-center">
