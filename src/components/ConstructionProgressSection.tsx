@@ -18,10 +18,7 @@ import { Card, CardContent } from '@/components/ui/card';
 // Construction progress data structure - simplified to years only
 const constructionProgress = {
   '2025': [
-    '/lovable-uploads/3231194c-7fbf-45df-9b3e-26acec733b88.png',
-    '/lovable-uploads/60915121-3220-4dfe-af22-01e78eb99c2b.png',
-    '/lovable-uploads/6b135259-eb7f-4bd3-bd01-adbeb6630882.png',
-    '/lovable-uploads/8e25cbd4-82d2-4e75-96eb-cff818949cec.png',
+    '/lovable-uploads/3a692c2d-03dd-4206-bfb8-ad71ca9218aa.png',
   ],
   '2026': [], // Empty array for "скоро" (coming soon)
 };
@@ -50,29 +47,15 @@ const ConstructionProgressSection = () => {
                   <p className="text-xl text-gray-500">Фотографии будут доступны в ближайшее время</p>
                 </div>
               ) : (
-                <Carousel className="w-full max-w-4xl mx-auto">
-                  <CarouselContent>
-                    {constructionProgress[year].map((image, index) => (
-                      <CarouselItem key={index} className="md:basis-1/1">
-                        <Card>
-                          <CardContent className="p-1">
-                            <AspectRatio ratio={16 / 9} className="bg-gray-100 overflow-hidden rounded-lg">
-                              <img
-                                src={image}
-                                alt={`Строительство ${year}, фото ${index + 1}`}
-                                className="object-cover w-full h-full"
-                              />
-                            </AspectRatio>
-                          </CardContent>
-                        </Card>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <div className="flex justify-center mt-4">
-                    <CarouselPrevious className="relative -left-0 top-0 translate-y-0 mr-4" />
-                    <CarouselNext className="relative -right-0 top-0 translate-y-0" />
-                  </div>
-                </Carousel>
+                <div className="w-full max-w-4xl mx-auto">
+                  <AspectRatio ratio={16 / 9} className="bg-gray-100 overflow-hidden rounded-lg">
+                    <img
+                      src={constructionProgress[year][0]}
+                      alt={`Строительство ${year}`}
+                      className="object-cover w-full h-full"
+                    />
+                  </AspectRatio>
+                </div>
               )}
             </TabsContent>
           ))}
