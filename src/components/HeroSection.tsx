@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Building, Home, Wallet } from 'lucide-react';
@@ -15,10 +16,10 @@ const HeroSection = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/7724b3b3-63c9-46cf-886c-a8f72f3a0f61.png')",
+            backgroundImage: "url('/lovable-uploads/6a97717c-aaea-4de6-b739-2fb9404e20c0.png')",
           }}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/25" />
       </div>
       
       <div className="relative h-full flex items-center">
