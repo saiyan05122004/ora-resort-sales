@@ -1,10 +1,12 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const MainNav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,21 +28,20 @@ const MainNav = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled 
+        isScrolled || isMobileMenuOpen || isMobile
           ? 'bg-white/90 backdrop-blur-md shadow-md' 
           : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           <a href="/" className="flex items-center">
             <div className="relative">
               <img
                 src="/lovable-uploads/6b135259-eb7f-4bd3-bd01-adbeb6630882.png"
                 alt="ORA Hotel & SPA"
-                className="h-20 w-auto transform transition-transform hover:scale-105"
+                className="h-14 md:h-20 w-auto transform transition-transform hover:scale-105"
               />
-              {/* Removed the premium apartments text that was here */}
             </div>
           </a>
 
@@ -50,7 +51,7 @@ const MainNav = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-white hover:text-primary transition-colors drop-shadow-md"
+                className={`text-base font-medium ${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-primary transition-colors drop-shadow-md`}
               >
                 {item.name}
               </a>
@@ -66,7 +67,7 @@ const MainNav = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white drop-shadow-md"
+            className={`md:hidden ${isScrolled ? 'text-gray-900' : 'text-white'} drop-shadow-md`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
