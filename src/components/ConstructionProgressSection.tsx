@@ -1,12 +1,14 @@
+
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Card, CardContent } from '@/components/ui/card';
 
 // Construction progress data structure - simplified to years only
 const constructionProgress = {
-  '2025': ['/lovable-uploads/75b511b8-513f-4e7b-ace4-ee6085bca294.png'],
+  '2025': ['/lovable-uploads/33d4e6e3-f0a1-46c5-b9f2-1ad1b7d4c9ec.png'],
   '2026': [] // Empty array for "скоро" (coming soon)
 };
+
 const ConstructionProgressSection = () => {
   return <section id="construction" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -28,7 +30,12 @@ const ConstructionProgressSection = () => {
                   <Card>
                     <CardContent className="p-1">
                       <AspectRatio ratio={16 / 9} className="bg-gray-100 overflow-hidden rounded-lg">
-                        <img src={constructionProgress[year][0]} alt={`Строительство ${year}`} className="object-cover w-full h-full" />
+                        <img 
+                          src={constructionProgress[year][0]} 
+                          alt={`Строительство ${year}`} 
+                          className="object-cover w-full h-full" 
+                          onError={(e) => console.error("Ошибка загрузки изображения:", e)}
+                        />
                       </AspectRatio>
                     </CardContent>
                   </Card>
@@ -38,4 +45,5 @@ const ConstructionProgressSection = () => {
       </div>
     </section>;
 };
+
 export default ConstructionProgressSection;
