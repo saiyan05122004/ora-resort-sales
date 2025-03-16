@@ -1,9 +1,12 @@
+
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Building, Home, Wallet } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     setIsVisible(true);
@@ -30,8 +33,8 @@ const HeroSection = () => {
             className="max-w-3xl"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-              АПАРТАМЕНТЫ <br />
-              <span className="text-primary">ORA HOTEL&SPA</span>
+              <span className="block">АПАРТАМЕНТЫ</span>
+              <span className="text-primary block">ORA HOTEL&SPA</span>
             </h1>
             <p className="text-xl text-white/90 mb-8 drop-shadow-md">
               Уникальная возможность приобрести апартаменты премиум-класса в 100 метрах от Каспийского моря
