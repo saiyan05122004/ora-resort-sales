@@ -11,7 +11,7 @@ import { Card, CardContent } from '@/components/ui/card';
 // Construction progress data structure - simplified to years only
 const constructionProgress = {
   '2025': [
-    '/lovable-uploads/138491b4-dfca-42b0-8ea2-f4c96ef7ad12.png',
+    '/lovable-uploads/75b511b8-513f-4e7b-ace4-ee6085bca294.png',
   ],
   '2026': [], // Empty array for "скоро" (coming soon)
 };
