@@ -73,27 +73,27 @@ const ContactSection = () => {
               </div>
               
               <div className="flex items-start gap-4 pt-2">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Instagram className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg text-gray-800">Instagram</h4>
-                  <a href="https://www.instagram.com/ora_apart/?igsh=MTJ6bWl4YzZoaWx3ag%3D%3D#" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
-                    @ora_apart
-                  </a>
-                </div>
+                <a href="https://www.instagram.com/ora_apart/?igsh=MTJ6bWl4YzZoaWx3ag%3D%3D#" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors">
+                    <Instagram className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-800 group-hover:text-primary transition-colors">Instagram</h4>
+                    <p className="text-gray-600 group-hover:text-primary transition-colors">Наш профиль в Instagram</p>
+                  </div>
+                </a>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <MessageCircle className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg text-gray-800">Telegram</h4>
-                  <a href="https://t.me/oraapartament" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
-                    @oraapartament
-                  </a>
-                </div>
+                <a href="https://t.me/oraapartament" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors">
+                    <MessageCircle className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-800 group-hover:text-primary transition-colors">Telegram</h4>
+                    <p className="text-gray-600 group-hover:text-primary transition-colors">Наш канал в Telegram</p>
+                  </div>
+                </a>
               </div>
             </div>
           </motion.div>
