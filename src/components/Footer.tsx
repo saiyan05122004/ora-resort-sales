@@ -40,9 +40,6 @@ const Footer = () => {
                 <a href="#apartments" className="text-white/80 hover:text-primary transition-colors">Апартаменты</a>
               </li>
               <li>
-                <a href="#location" className="text-white/80 hover:text-primary transition-colors">Расположение</a>
-              </li>
-              <li>
                 <a href="#contact" className="text-white/80 hover:text-primary transition-colors">Контакты</a>
               </li>
             </ul>
@@ -87,7 +84,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 mr-3 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-white/80">
-                    г. Каспийск, ул. Приморская, 21
+                    г. Каспийск, ул. Коттеджная
                   </p>
                 </div>
               </li>

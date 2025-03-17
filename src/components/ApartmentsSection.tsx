@@ -20,8 +20,8 @@ const ApartmentsSection = () => {
         "Высокоскоростной Wi-Fi",
         "Современная ванная комната с душевой кабиной и джакузи"
       ],
-      image: "/lovable-uploads/ec0cbbbc-428b-4cb4-a521-3adbae86863d.png",
-      floorplan: "/lovable-uploads/3231194c-7fbf-45df-9b3e-26acec733b88.png",
+      image: "/lovable-uploads/luxury.jpg",
+      floorplan: "/lovable-uploads/luxury_plan.png",
       price: "от 8.5 млн ₽",
       roi: "12-15% годовых"
     },
@@ -41,8 +41,8 @@ const ApartmentsSection = () => {
         "Высокоскоростной Wi-Fi",
         "Современная ванная комната с душевой кабиной"
       ],
-      image: "/lovable-uploads/60915121-3220-4dfe-af22-01e78eb99c2b.png",
-      floorplan: "/lovable-uploads/3231194c-7fbf-45df-9b3e-26acec733b88.png",
+      image: "/lovable-uploads/half_luxury.jpg",
+      floorplan: "/lovable-uploads/half_luxury_plan.png",
       price: "от 6.2 млн ₽",
       roi: "10-12% годовых"
     },
@@ -62,8 +62,8 @@ const ApartmentsSection = () => {
         "Высокоскоростной Wi-Fi",
         "Компактная ванная комната с душем"
       ],
-      image: "/lovable-uploads/8e25cbd4-82d2-4e75-96eb-cff818949cec.png",
-      floorplan: "/lovable-uploads/3231194c-7fbf-45df-9b3e-26acec733b88.png",
+      image: "/lovable-uploads/standart.jpg",
+      floorplan: "/lovable-uploads/standart_plan.png",
       price: "от 4.9 млн ₽",
       roi: "8-10% годовых"
     }
@@ -120,7 +120,7 @@ const ApartmentsSection = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <div className="mb-4">
                   <h4 className="font-semibold text-lg mb-2 text-gray-800">Характеристики:</h4>
@@ -135,7 +135,7 @@ const ApartmentsSection = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="mb-4">
                   <h4 className="font-semibold text-lg mb-2 text-gray-800">Удобства:</h4>
                   <ul className="space-y-2">
@@ -149,7 +149,7 @@ const ApartmentsSection = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="mt-6">
                   <h4 className="font-semibold text-lg mb-3 text-gray-800">Планировка:</h4>
                   <div className="bg-gray-100 p-2 rounded-lg">
@@ -160,10 +160,10 @@ const ApartmentsSection = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="mt-6 pt-6 border-t border-gray-200">
-                  <a 
-                    href="#contact" 
+                  <a
+                    href="#contact"
                     className="block w-full bg-primary hover:bg-primary-dark text-secondary font-bold py-3 rounded-lg text-center transition-colors"
                   >
                     Узнать подробнее

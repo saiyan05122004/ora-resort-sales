@@ -21,7 +21,6 @@ const MainNav = () => {
     { name: 'О комплексе', href: '#about' },
     { name: 'Удобства', href: '#pool' },
     { name: 'Апартаменты', href: '#apartments' },
-    { name: 'Расположение', href: '#location' },
     { name: 'Контакты', href: '#contact' },
   ];
 
