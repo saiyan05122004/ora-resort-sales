@@ -1,18 +1,19 @@
-
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Instagram, MessageCircle } from 'lucide-react';
-
 const ContactSection = () => {
-  return (
-    <section id="contact" className="py-20 bg-white">
+  return <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto text-center mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.8
+      }} viewport={{
+        once: true
+      }} className="max-w-3xl mx-auto text-center mb-16">
           <span className="text-primary font-semibold">ОСТАЛИСЬ ВОПРОСЫ?</span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Свяжитесь с нами для приобретения апартаментов
@@ -23,13 +24,17 @@ const ContactSection = () => {
         </motion.div>
 
         <div className="flex justify-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bg-secondary/10 p-8 rounded-2xl max-w-2xl w-full"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: -20
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.5
+        }} viewport={{
+          once: true
+        }} className="bg-secondary/10 p-8 rounded-2xl max-w-2xl w-full">
             <h3 className="text-2xl font-bold mb-6 text-gray-800">Наши контакты</h3>
             
             <div className="space-y-6">
@@ -65,9 +70,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-gray-800">Адрес</h4>
-                  <p className="text-gray-600">
-                    г. Каспийск, ул. Приморская, 21
-                  </p>
+                  <p className="text-gray-600">г. Каспийск, ул. Коттеджная</p>
                   <p className="text-sm text-gray-500 mt-1">100 метров от побережья Каспийского моря</p>
                 </div>
               </div>
@@ -99,8 +102,6 @@ const ContactSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
