@@ -6,7 +6,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 // Construction progress data structure - simplified to years only
 const constructionProgress = {
-  '2025': ['/lovable-uploads/33d4e6e3-f0a1-46c5-b9f2-1ad1b7d4c9ec.png'],
+  '2025': ['/lovable-uploads/b23c95d3-a5af-4446-baed-7475f896b8fe.png'],
   '2026': [] // Empty array for "скоро" (coming soon)
 };
 
