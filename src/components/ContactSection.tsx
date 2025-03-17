@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, MessageCircle } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -69,6 +69,30 @@ const ContactSection = () => {
                     г. Каспийск, ул. Приморская, 21
                   </p>
                   <p className="text-sm text-gray-500 mt-1">100 метров от побережья Каспийского моря</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4 pt-2">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Instagram className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg text-gray-800">Instagram</h4>
+                  <a href="https://www.instagram.com/ora_apart/?igsh=MTJ6bWl4YzZoaWx3ag%3D%3D#" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                    @ora_apart
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <MessageCircle className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg text-gray-800">Telegram</h4>
+                  <a href="https://t.me/oraapartament" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                    @oraapartament
+                  </a>
                 </div>
               </div>
             </div>

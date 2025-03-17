@@ -1,5 +1,5 @@
 
-import { Phone, Mail, MapPin, Instagram, Telegram } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a href="https://t.me/oraapartament" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/80 transition-colors">
-                <Telegram size={18} />
+                <MessageCircle size={18} />
               </a>
             </div>
           </div>
