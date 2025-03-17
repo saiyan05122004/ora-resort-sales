@@ -25,12 +25,12 @@ const HeroSection = () => {
       </div>
       
       <div className="relative h-full flex items-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 pt-10 md:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            className="max-w-3xl mt-16 md:mt-0"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
               <span className="block">АПАРТАМЕНТЫ</span>
