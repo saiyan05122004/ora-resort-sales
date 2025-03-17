@@ -57,7 +57,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-gray-800">Email</h4>
-                  <a href="mailto:79034696969@yandex.ru" className="text-gray-600 hover:text-primary transition-colors\n">
+                  <a href="mailto:79034696969@yandex.ru" className="text-gray-600 hover:text-primary transition-colors text-[15px]\\n">
                     79034696969@yandex.ru
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Мы отвечаем в течение 24 часов</p>
