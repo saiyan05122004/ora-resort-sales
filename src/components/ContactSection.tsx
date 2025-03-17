@@ -44,7 +44,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-gray-800">Телефон</h4>
-                  <a href="tel:+78934696969" className="text-gray-600 hover:text-primary transition-colors">
+                  <a href="tel:+78934696969" className=" hover:text-primary transition-colors">
                     8 903 469 69 69
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Ежедневно с 9:00 до 21:00</p>
@@ -57,7 +57,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-gray-800">Email</h4>
-                  <a href="mailto:79034696969@yandex.ru" className="text-gray-600 hover:text-primary transition-colors text-[15px]\\n">
+                  <a href="mailto:79034696969@yandex.ru" className=" hover:text-primary transition-colors text-[15px] text-gray-600\\n">
                     79034696969@yandex.ru
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Мы отвечаем в течение 24 часов</p>
