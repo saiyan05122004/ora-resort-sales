@@ -51,7 +51,7 @@ const PoolSection = () => {
             viewport={{ once: true }}
           >
             <img
-              src="/lovable-uploads/7724b3b3-63c9-46cf-886c-a8f72f3a0f61.png"
+              src="/uploads/7724b3b3-63c9-46cf-886c-a8f72f3a0f61.png"
               alt="Бассейн"
               className="w-full h-[400px] object-cover rounded-2xl"
             />

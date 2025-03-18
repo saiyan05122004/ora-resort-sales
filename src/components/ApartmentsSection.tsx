@@ -20,8 +20,8 @@ const ApartmentsSection = () => {
         "Высокоскоростной Wi-Fi",
         "Современная ванная комната с душевой кабиной и джакузи"
       ],
-      image: "/lovable-uploads/luxury.jpg",
-      floorplan: "/lovable-uploads/luxury_plan.png",
+      image: "/uploads/luxury.jpg",
+      floorplan: "/uploads/luxury_plan.png",
       price: "от 8.5 млн ₽",
       roi: "12-15% годовых"
     },
@@ -41,8 +41,8 @@ const ApartmentsSection = () => {
         "Высокоскоростной Wi-Fi",
         "Современная ванная комната с душевой кабиной"
       ],
-      image: "/lovable-uploads/half_luxury.jpg",
-      floorplan: "/lovable-uploads/half_luxury_plan.png",
+      image: "/uploads/half_luxury.jpg",
+      floorplan: "/uploads/half_luxury_plan.png",
       price: "от 6.2 млн ₽",
       roi: "10-12% годовых"
     },
@@ -62,8 +62,8 @@ const ApartmentsSection = () => {
         "Высокоскоростной Wi-Fi",
         "Компактная ванная комната с душем"
       ],
-      image: "/lovable-uploads/standart.jpg",
-      floorplan: "/lovable-uploads/standart_plan.png",
+      image: "/uploads/standart.jpg",
+      floorplan: "/uploads/standart_plan.png",
       price: "от 4.9 млн ₽",
       roi: "8-10% годовых"
     }

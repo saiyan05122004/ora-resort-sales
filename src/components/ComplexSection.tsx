@@ -39,7 +39,7 @@ const ComplexSection = () => {
               Безупречный сервис и все условия для комфортного отдыха.
             </p>
             <img 
-              src="/lovable-uploads/pools.png"
+              src="/uploads/pools.png"
               alt="Бассейн комплекса"
               className="w-full h-48 object-cover rounded-xl mt-4"
             />
@@ -61,7 +61,7 @@ const ComplexSection = () => {
               и постоянное увеличение стоимости вашей недвижимости.
             </p>
             <img 
-              src="/lovable-uploads/ec0cbbbc-428b-4cb4-a521-3adbae86863d.png"
+              src="/uploads/ec0cbbbc-428b-4cb4-a521-3adbae86863d.png"
               alt="Вид на море"
               className="w-full h-48 object-cover rounded-xl mt-4"
             />
@@ -83,7 +83,7 @@ const ComplexSection = () => {
               и гарантированное увеличение капитала в долгосрочной перспективе.
             </p>
             <img 
-              src="/lovable-uploads/invest.jpg"
+              src="/uploads/invest.jpg"
               alt="Интерьер апартаментов"
               className="w-full h-48 object-cover rounded-xl mt-4"
             />

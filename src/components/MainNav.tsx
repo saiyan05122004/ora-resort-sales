@@ -37,7 +37,7 @@ const MainNav = () => {
           <a href="/" className="flex items-center">
             <div className="relative">
               <img
-                src="/lovable-uploads/6b135259-eb7f-4bd3-bd01-adbeb6630882.png"
+                src="/uploads/6b135259-eb7f-4bd3-bd01-adbeb6630882.png"
                 alt="ORA Hotel & SPA"
                 className="h-14 md:h-20 w-auto transform transition-transform hover:scale-105"
               />
