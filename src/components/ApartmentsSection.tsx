@@ -1,6 +1,14 @@
 
 import { motion } from 'framer-motion';
 import { Star, Crown, Home, Check } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ApartmentsSection = () => {
   const apartments = [
@@ -20,8 +28,10 @@ const ApartmentsSection = () => {
         "Wi-Fi",
         "Современная ванная комната"
       ],
-      image: "/uploads/luxury.jpg",
-      floorplan: "/uploads/luxury_plan.png",
+      images: [
+        "/uploads/luxury.jpg",
+        "/uploads/luxury_plan.png"
+      ],
       price: "от 21.6 млн ₽",
       roi: "10-15% годовых"
     },
@@ -41,8 +51,10 @@ const ApartmentsSection = () => {
         "Wi-Fi",
         "Современная ванная комната"
       ],
-      image: "/uploads/half_luxury.jpg",
-      floorplan: "/uploads/half_luxury_plan.png",
+      images: [
+        "/uploads/half_luxury.jpg",
+        "/uploads/half_luxury_plan.png"
+      ],
       price: "от 18 млн ₽",
       roi: "10-15% годовых"
     },
@@ -62,8 +74,10 @@ const ApartmentsSection = () => {
         "Wi-Fi",
         "Компактная ванная комната"
       ],
-      image: "/uploads/standart.jpg",
-      floorplan: "/uploads/standart_plan.png",
+      images: [
+        "/uploads/standart.jpg",
+        "/uploads/standart_plan.png"
+      ],
       price: "от 11.6 млн ₽",
       roi: "10-15% годовых"
     }
@@ -98,30 +112,43 @@ const ApartmentsSection = () => {
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all"
             >
-              <div className="relative h-64">
-                <img
-                  src={apartment.image}
-                  alt={apartment.type}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60"></div>
-                <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm rounded-full p-2">
-                  <apartment.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-2xl font-bold text-white mb-1">
-                    {apartment.type}
-                  </h3>
-                  <div className="flex items-center justify-between">
-                    <span className="text-white/90 font-medium">{apartment.price}</span>
-                    <span className="bg-secondary/80 text-white px-3 py-1 rounded-full text-sm">
-                      Доходность: {apartment.roi}
-                    </span>
+              <div className="p-4">
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {apartment.images.map((image, imgIndex) => (
+                      <CarouselItem key={imgIndex}>
+                        <AspectRatio ratio={4/3} className="bg-muted">
+                          <img
+                            src={image}
+                            alt={imgIndex === 0 ? apartment.type : `Планировка ${apartment.type}`}
+                            className="w-full h-full object-cover rounded-lg"
+                          />
+                        </AspectRatio>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="flex justify-center mt-2">
+                    <CarouselPrevious className="static translate-y-0 mr-2" />
+                    <CarouselNext className="static translate-y-0 ml-2" />
                   </div>
-                </div>
+                </Carousel>
               </div>
 
               <div className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-primary/20 rounded-full p-2">
+                    <apartment.icon className="w-5 h-5 text-primary" />
+                  </span>
+                  <h3 className="text-2xl font-bold text-gray-900">{apartment.type}</h3>
+                </div>
+
+                <div className="flex justify-between mb-4">
+                  <span className="font-medium text-gray-900">{apartment.price}</span>
+                  <span className="bg-secondary/80 text-white px-3 py-1 rounded-full text-sm">
+                    Доходность: {apartment.roi}
+                  </span>
+                </div>
+
                 <div className="mb-4">
                   <h4 className="font-semibold text-lg mb-2 text-gray-800">Характеристики:</h4>
                   <ul className="space-y-2">
@@ -148,17 +175,6 @@ const ApartmentsSection = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                <div className="mt-6">
-                  <h4 className="font-semibold text-lg mb-3 text-gray-800">Планировка:</h4>
-                  <div className="bg-gray-100 p-2 rounded-lg">
-                    <img
-                      src={apartment.floorplan}
-                      alt={`Планировка ${apartment.type}`}
-                      className="w-full h-auto rounded"
-                    />
-                  </div>
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-gray-200">
