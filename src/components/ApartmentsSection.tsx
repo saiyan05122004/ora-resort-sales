@@ -1,6 +1,14 @@
 
 import { motion } from 'framer-motion';
 import { Star, Crown, Home, Check } from 'lucide-react';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ApartmentsSection = () => {
   const apartments = [
@@ -21,7 +29,10 @@ const ApartmentsSection = () => {
         "Современная ванная комната"
       ],
       image: "/uploads/luxury.jpg",
-      floorplan: "/uploads/luxury_plan.png",
+      floorplans: [
+        "/uploads/luxury_plan.png",
+        "/uploads/luxury.jpg"
+      ],
       price: "от 21.6 млн ₽",
       roi: "10-15% годовых"
     },
@@ -42,7 +53,10 @@ const ApartmentsSection = () => {
         "Современная ванная комната"
       ],
       image: "/uploads/half_luxury.jpg",
-      floorplan: "/uploads/half_luxury_plan.png",
+      floorplans: [
+        "/uploads/half_luxury_plan.png",
+        "/uploads/half_luxury.jpg"
+      ],
       price: "от 18 млн ₽",
       roi: "10-15% годовых"
     },
@@ -63,7 +77,10 @@ const ApartmentsSection = () => {
         "Компактная ванная комната"
       ],
       image: "/uploads/standart.jpg",
-      floorplan: "/uploads/standart_plan.png",
+      floorplans: [
+        "/uploads/standart_plan.png",
+        "/uploads/standart.jpg"
+      ],
       price: "от 11.6 млн ₽",
       roi: "10-15% годовых"
     }
@@ -153,11 +170,25 @@ const ApartmentsSection = () => {
                 <div className="mt-6">
                   <h4 className="font-semibold text-lg mb-3 text-gray-800">Планировка:</h4>
                   <div className="bg-gray-100 p-2 rounded-lg">
-                    <img
-                      src={apartment.floorplan}
-                      alt={`Планировка ${apartment.type}`}
-                      className="w-full h-auto rounded"
-                    />
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {apartment.floorplans.map((floorplan, idx) => (
+                          <CarouselItem key={idx}>
+                            <AspectRatio ratio={16/9}>
+                              <img
+                                src={floorplan}
+                                alt={`Планировка ${apartment.type} ${idx + 1}`}
+                                className="w-full h-full object-cover rounded"
+                              />
+                            </AspectRatio>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <div className="flex justify-center gap-2 mt-2">
+                        <CarouselPrevious className="relative -left-0 top-0 translate-y-0 h-8 w-8" />
+                        <CarouselNext className="relative -right-0 top-0 translate-y-0 h-8 w-8" />
+                      </div>
+                    </Carousel>
                   </div>
                 </div>
 
