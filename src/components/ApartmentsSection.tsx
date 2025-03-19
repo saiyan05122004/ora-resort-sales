@@ -31,7 +31,7 @@ const ApartmentsSection = () => {
       image: "/uploads/luxury.jpg",
       floorplans: [
         "/uploads/luxury_plan.png",
-        "/uploads/luxury.jpg"
+        "/uploads/luxury_plan2.png"
       ],
       price: "от 21.6 млн ₽",
       roi: "10-15% годовых"
@@ -55,7 +55,7 @@ const ApartmentsSection = () => {
       image: "/uploads/half_luxury.jpg",
       floorplans: [
         "/uploads/half_luxury_plan.png",
-        "/uploads/half_luxury.jpg"
+        "/uploads/half_luxury_plan2.png"
       ],
       price: "от 18 млн ₽",
       roi: "10-15% годовых"
@@ -79,7 +79,7 @@ const ApartmentsSection = () => {
       image: "/uploads/standart.jpg",
       floorplans: [
         "/uploads/standart_plan.png",
-        "/uploads/standart.jpg"
+        "/uploads/standart_plan2.png"
       ],
       price: "от 11.6 млн ₽",
       roi: "10-15% годовых"
