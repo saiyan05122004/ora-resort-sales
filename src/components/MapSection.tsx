@@ -1,60 +1,8 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
-// Declare the ymaps global variable from Yandex Maps
-declare global {
-  interface Window {
-    ymaps: any;
-  }
-}
-
 const MapSection = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const [mapReady, setMapReady] = useState(false);
-
-  useEffect(() => {
-    // Check if Yandex Maps API is loaded
-    if (window.ymaps && mapContainer.current && !mapReady) {
-      window.ymaps.ready(() => {
-        // Create map once the API is fully loaded
-        const map = new window.ymaps.Map(mapContainer.current, {
-          center: [42.914168, 47.620655], // Latitude, Longitude
-          zoom: 15,
-          controls: ['zoomControl', 'fullscreenControl']
-        });
-        
-        // Add marker at the specified coordinates
-        const placemark = new window.ymaps.Placemark([42.914168, 47.620655], {
-          balloonContent: '<strong>ORA HOTEL&SPA</strong><br>г. Каспийск, ул. Коттеджная'
-        }, {
-          preset: 'islands#goldIcon' // Gold-colored marker to match the primary color theme
-        });
-        
-        map.geoObjects.add(placemark);
-        
-        // Open balloon on marker by default
-        placemark.balloon.open();
-        
-        setMapReady(true);
-      });
-    }
-  }, [mapReady]);
-
-  // Function to initialize API loading
-  useEffect(() => {
-    // Check if script is already added
-    const existingScript = document.getElementById('yandex-maps');
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = 'yandex-maps';
-      script.src = 'https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU';
-      script.async = true;
-      script.onload = () => setMapReady(false); // Reset to trigger map creation
-      document.head.appendChild(script);
-    }
-  }, []);
-
   return (
     <section id="map" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -74,10 +22,27 @@ const MapSection = () => {
         </motion.div>
 
         <div className="rounded-2xl overflow-hidden shadow-xl">
-          <div 
-            ref={mapContainer} 
-            className="w-full h-[500px]"
-          />
+          <div className="w-full relative overflow-hidden" style={{ height: '500px' }}>
+            <iframe 
+              src="https://yandex.ru/map-widget/v1/?ll=47.622002%2C42.913569&mode=search&sll=47.620655%2C42.914168&text=42.914168%2C47.620655&z=17.36" 
+              width="100%" 
+              height="100%" 
+              frameBorder="0" 
+              allowFullScreen={true} 
+              style={{ position: 'relative' }}
+              title="Yandex Map Location"
+            />
+            <div className="absolute top-0 left-0">
+              <a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style={{ color: '#eee', fontSize: '12px' }}>
+                Яндекс Карты
+              </a>
+            </div>
+            <div className="absolute top-3.5 left-0">
+              <a href="https://yandex.ru/maps/?ll=47.622002%2C42.913569&mode=search&sll=47.620655%2C42.914168&text=42.914168%2C47.620655&utm_medium=mapframe&utm_source=maps&z=17.36" style={{ color: '#eee', fontSize: '12px' }}>
+                Рекреационная Зона — Яндекс Карты
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
