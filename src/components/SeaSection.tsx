@@ -29,7 +29,7 @@ const SeaSection = () => {
             className="h-full"
           >
             <img
-              src="/uploads/ec0cbbbc-428b-4cb4-a521-3adbae86863d.png"
+              src="/uploads/beach.jpeg"
               alt="Пляж"
               className="w-full h-full object-cover rounded-2xl shadow-lg"
             />
@@ -42,7 +42,7 @@ const SeaSection = () => {
             className="h-full"
           >
             <img
-              src="/uploads/8e25cbd4-82d2-4e75-96eb-cff818949cec.png"
+              src="/uploads/beach2.jpeg"
               alt="Море"
               className="w-full h-full object-cover rounded-2xl shadow-lg"
             />
