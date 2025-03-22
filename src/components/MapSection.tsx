@@ -1,51 +1,59 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
 import { motion } from 'framer-motion';
+
+// Declare the ymaps global variable from Yandex Maps
+declare global {
+  interface Window {
+    ymaps: any;
+  }
+}
 
 const MapSection = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const [mapToken, setMapToken] = useState<string>('');
-  const [tokenEntered, setTokenEntered] = useState(false);
-
-  const initializeMap = (token: string) => {
-    if (!mapContainer.current) return;
-    
-    mapboxgl.accessToken = token;
-    
-    if (map.current) return;
-    
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v12',
-      center: [47.620655, 42.914168], // Longitude, Latitude
-      zoom: 14
-    });
-
-    // Add navigation controls
-    map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
-    
-    // Add marker at the specified coordinates
-    new mapboxgl.Marker({ color: '#E6B567' })
-      .setLngLat([47.620655, 42.914168])
-      .setPopup(new mapboxgl.Popup().setHTML('<h3 class="font-bold">ORA HOTEL&SPA</h3><p>г. Каспийск, ул. Коттеджная</p>'))
-      .addTo(map.current);
-  };
+  const [mapReady, setMapReady] = useState(false);
 
   useEffect(() => {
-    if (tokenEntered && mapToken) {
-      initializeMap(mapToken);
+    // Check if Yandex Maps API is loaded
+    if (window.ymaps && mapContainer.current && !mapReady) {
+      window.ymaps.ready(() => {
+        // Create map once the API is fully loaded
+        const map = new window.ymaps.Map(mapContainer.current, {
+          center: [42.914168, 47.620655], // Latitude, Longitude
+          zoom: 15,
+          controls: ['zoomControl', 'fullscreenControl']
+        });
+        
+        // Add marker at the specified coordinates
+        const placemark = new window.ymaps.Placemark([42.914168, 47.620655], {
+          balloonContent: '<strong>ORA HOTEL&SPA</strong><br>г. Каспийск, ул. Коттеджная'
+        }, {
+          preset: 'islands#goldIcon' // Gold-colored marker to match the primary color theme
+        });
+        
+        map.geoObjects.add(placemark);
+        
+        // Open balloon on marker by default
+        placemark.balloon.open();
+        
+        setMapReady(true);
+      });
     }
+  }, [mapReady]);
 
-    return () => {
-      if (map.current) {
-        map.current.remove();
-        map.current = null;
-      }
-    };
-  }, [tokenEntered, mapToken]);
+  // Function to initialize API loading
+  useEffect(() => {
+    // Check if script is already added
+    const existingScript = document.getElementById('yandex-maps');
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.id = 'yandex-maps';
+      script.src = 'https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU';
+      script.async = true;
+      script.onload = () => setMapReady(false); // Reset to trigger map creation
+      document.head.appendChild(script);
+    }
+  }, []);
 
   return (
     <section id="map" className="py-20 bg-white">
@@ -65,41 +73,11 @@ const MapSection = () => {
           </p>
         </motion.div>
 
-        {!tokenEntered ? (
-          <div className="flex flex-col items-center justify-center p-6 bg-secondary/10 rounded-2xl max-w-xl mx-auto mb-10">
-            <p className="mb-4 text-center">Для отображения карты необходимо ввести публичный токен Mapbox:</p>
-            <div className="flex gap-2 w-full max-w-md">
-              <input 
-                type="text" 
-                value={mapToken}
-                onChange={(e) => setMapToken(e.target.value)}
-                placeholder="Введите ваш публичный токен Mapbox"
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button 
-                onClick={() => setTokenEntered(true)}
-                disabled={!mapToken}
-                className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-              >
-                Применить
-              </button>
-            </div>
-            <p className="mt-2 text-sm text-gray-500 text-center">
-              Получить токен можно на сайте <a href="https://www.mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Mapbox</a> после регистрации
-            </p>
-          </div>
-        ) : null}
-
         <div className="rounded-2xl overflow-hidden shadow-xl">
           <div 
             ref={mapContainer} 
-            className={`w-full h-[500px] ${!tokenEntered ? 'hidden' : ''}`}
+            className="w-full h-[500px]"
           />
-          {!tokenEntered && (
-            <div className="w-full h-[500px] bg-gray-100 flex items-center justify-center">
-              <p className="text-gray-500">Введите токен Mapbox для отображения карты</p>
-            </div>
-          )}
         </div>
       </div>
     </section>
