@@ -7,6 +7,7 @@ import PoolSection from '@/components/PoolSection';
 import ApartmentsSection from '@/components/ApartmentsSection';
 import ConstructionProgressSection from '@/components/ConstructionProgressSection';
 import ContactSection from '@/components/ContactSection';
+import MapSection from '@/components/MapSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
       <ApartmentsSection />
       <ConstructionProgressSection />
       <ContactSection />
+      <MapSection />
       <Footer />
     </div>
   );
