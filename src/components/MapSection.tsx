@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -23,23 +22,25 @@ const MapSection = () => {
 
         <div className="rounded-2xl overflow-hidden shadow-xl">
           <div className="w-full relative overflow-hidden" style={{ height: '500px' }}>
-            <iframe 
-              src="https://yandex.ru/map-widget/v1/?ll=47.622002%2C42.913569&mode=search&sll=47.620655%2C42.914168&text=42.914168%2C47.620655&z=17.36" 
-              width="100%" 
-              height="100%" 
-              frameBorder="0" 
-              allowFullScreen={true} 
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?ll=47.620863%2C42.913566&mode=poi&poi%5Bpoint%5D=47.621050%2C42.914025&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D108478460975&z=19.03"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen={true}
               style={{ position: 'relative' }}
               title="Yandex Map Location"
             />
             <div className="absolute top-0 left-0">
-              <a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style={{ color: '#eee', fontSize: '12px' }}>
-                Яндекс Карты
+              <a href="https://yandex.ru/maps/org/ora_villa/108478460975/?utm_medium=mapframe&utm_source=maps"
+                 style={{ color: '#eee', fontSize: '12px' }}>
+                Ora Villa
               </a>
             </div>
             <div className="absolute top-3.5 left-0">
-              <a href="https://yandex.ru/maps/?ll=47.622002%2C42.913569&mode=search&sll=47.620655%2C42.914168&text=42.914168%2C47.620655&utm_medium=mapframe&utm_source=maps&z=17.36" style={{ color: '#eee', fontSize: '12px' }}>
-                Рекреационная Зона — Яндекс Карты
+              <a href="https://yandex.ru/maps/11010/republic-of-dagestan/category/hotel/184106414/?utm_medium=mapframe&utm_source=maps"
+                 style={{ color: '#eee', fontSize: '12px' }}>
+                Гостиница в Республике Дагестан
               </a>
             </div>
           </div>
