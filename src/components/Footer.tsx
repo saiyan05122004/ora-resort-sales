@@ -18,7 +18,7 @@ const Footer = () => {
               Премиальные апартаменты на берегу Каспийского моря — идеальное решение для инвестиций и отдыха.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/ora_apart/?igsh=MTJ6bWl4YzZoaWx3ag%3D%3D#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/80 transition-colors">
+              <a href="https://www.instagram.com/ora.apart?igsh=MWFnaW02aGplNWFxNw==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/80 transition-colors">
                 <Instagram size={18} />
               </a>
               <a href="https://t.me/oraapartament" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary/80 transition-colors">

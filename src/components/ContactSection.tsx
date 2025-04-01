@@ -76,7 +76,7 @@ const ContactSection = () => {
               </div>
               
               <div className="flex items-start gap-4 pt-2">
-                <a href="https://www.instagram.com/ora_apart/?igsh=MTJ6bWl4YzZoaWx3ag%3D%3D#" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
+                <a href="https://www.instagram.com/ora.apart?igsh=MWFnaW02aGplNWFxNw==" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
                   <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors">
                     <Instagram className="w-6 h-6 text-primary" />
                   </div>
