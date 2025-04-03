@@ -80,7 +80,7 @@ const ComplexSection = () => {
             <h3 className="text-xl font-semibold mb-3">Надежная инвестиция</h3>
             <p className="text-gray-600 mb-4">
               Права собственности на апартаменты уже зарегистрированы ЕГРН, помещение «нежилое» назначение «гостиница».
-
+              Получайте пассивный доход от аренды.
             </p>
             <img 
               src="/uploads/invest.jpg"
